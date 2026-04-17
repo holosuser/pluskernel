@@ -55,4 +55,6 @@ void clearscreen(){
         vimem[i * 2]=' ';
         vimem[i * 2 + 1]=0x07;
     }
+    cursor=0;
+    updatecursor();
 }
