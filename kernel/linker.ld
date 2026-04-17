@@ -1,17 +1,16 @@
 ENTRY(maink)
 SECTIONS {
     . = 1M;
-    .text : {
+
+    .multiboot : ALIGN(4) {
+        KEEP(*(.multiboot))
+    }
+
+    .text : ALIGN(4) {
         *(.text*)
     }
-    .rodata : {
-        *(.rodata*)
-    }
-    .data : {
-        *(.data*)
-    }
-   .bss : {
-        *(.bss*)
-        *(COMMON)
-    }
+
+    .rodata : ALIGN(4) { *(.rodata*) }
+    .data : ALIGN(4) { *(.data*) }
+    .bss : ALIGN(4) { *(COMMON) *(.bss*) }
 }
