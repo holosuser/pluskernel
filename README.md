@@ -1,6 +1,6 @@
 # pluskernel x32
 
-![pluskernel](pluskernel.jpg)
+![pluskernel](pluskernel.png)
 
 **dependencies (for merging)**
 ``` sh
